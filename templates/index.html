@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block direc %}
+<a class="btn btn-light" aria-current="page" href="/">Home</a>                    
+{% endblock direc %}
+
+{% block body %}
+    
+      <div class="container">
+        <h2>New Note</h2>
+        <form action="/" method="POST">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" class="form-control" name="title" id="title" placeholder="Give a title" maxlength="30" required>
+          </div>
+          <div class="mb-3">
+            <label for="desc" class="form-label">Your Note</label>
+            <textarea type="text" class="form-control" name="desc" id="desc" rows="10" placeholder="Start  Writing Your Note" maxlength="1900" required></textarea>
+          </div>
+          <div>
+            <button type="submit" class="btn btn-outline-dark">Save</button>
+            <a href="/" class="btn btn-outline-dark" type="button">Back</a>
+          </div>
+        </form>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  
+{% endblock body %}
